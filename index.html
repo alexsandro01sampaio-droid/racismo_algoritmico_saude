@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde, IA e Racismo Algorítmico | Portal & Simulador de Auditoria</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🩺</span> Saúde<span>&</span>IA
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#sobre">O Tema</a></li>
+                    <li><a href="#contestacao">Simulador de Contestação</a></li>
+                    <li><a href="#auditoria">Painel do Auditor</a></li>
+                    <li><a href="#quiz">Quiz UFMA</a></li>
+                    <li><a href="login.html" class="btn btn-outline">Entrar</a></li>
+                    <li><a href="registro.html" class="btn btn-primary">Cadastrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="badge-tag">Conscientização & Ética em Saúde Digital</span>
+            <h1>Diagnósticos por IA e o Racismo Algorítmico</h1>
+            <p>Sistemas automatizados de triagem e inteligência artificial médica apresentam subestimação grave do risco clínico em pacientes negros devido ao viés nos conjuntos de dados de treinamento.</p>
+            <div class="hero-actions">
+                <a href="#contestacao" class="btn btn-primary btn-large">Experimentar Simulador de Contestação</a>
+                <a href="#sobre" class="btn btn-outline-light btn-large">Compreender o Problema</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Informativa & Estatísticas -->
+    <main class="container">
+        <section id="sobre" class="content-section">
+            <div class="section-header">
+                <h2>Como o Viés Algorítmico Afeta a Medicina</h2>
+                <p>O treinamento de redes neurais com imagens clínicas de populações majoritariamente brancas gera lacunas diagnósticas em peles com fototipos de Fitzpatrick IV, V e VI.</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Bases de Treino Homogêneas</h3>
+                    <p>Cerca de 80% a 90% das bibliotecas dermatológicas de referência utilizadas em algoritmos são compostas por fotos de peles claras, gerando viés amostral severo.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚠️</div>
+                    <h3>Falsos Negativos Aumentados</h3>
+                    <p>Sinais de lesões cancerígenas e dermatoses graves em pacientes pretos e pardos são frequentemente classificados como de "baixo risco" ou ignorados pelos modelos de visão computacional.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏥</div>
+                    <h3>Viés em Algoritmos de Triagem</h3>
+                    <p>Sistemas de gestão hospitalar que usam histórico de custos como indicador de urgência priorizam pacientes brancos, omitindo o histórico de desigualdade de acesso à saúde.</p>
+                </div>
+            </div>
+
+            <!-- Gráfico de Disparidade de Diagnóstico por Fototipo -->
+            <div class="data-box">
+                <h3>Taxa de Precisão Diagnóstica de IA Dermatológica por Fototipo de Fitzpatrick</h3>
+                <p>Análise comparativa das taxas de falsos negativos em testes de diagnóstico dermatológico automatizado:</p>
+
+                <div class="fitzpatrick-bar-container">
+                    <div class="fitzbar-item">
+                        <span class="fitz-label">Tipo I e II (Peles Claras)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bar-high" style="width: 92%;">92% de Precisão</div>
+                        </div>
+                    </div>
+                    <div class="fitzbar-item">
+                        <span class="fitz-label">Tipo III e IV (Peles Morenas)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bar-mid" style="width: 71%;">71% de Precisão</div>
+                        </div>
+                    </div>
+                    <div class="fitzbar-item">
+                        <span class="fitz-label">Tipo V e VI (Peles Negras)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bar-low" style="width: 48%;">48% de Precisão (52% de Erro)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIMULADOR DE CONTESTAÇÃO (FLUXO DO USUÁRIO EM 4 ETAPAS) -->
+        <section id="contestacao" class="content-section interactive-area">
+            <div class="section-header">
+                <h2>Caminho do Usuário: Contestação de Decisão Injusta da IA</h2>
+                <p>Simulação interativa demonstrando o fluxo em 4 etapas para que pacientes e profissionais de saúde contestem laudos automatizados enviesados e solicitem revisão médica humana.</p>
+            </div>
+
+            <!-- Indicador das 4 Etapas -->
+            <div class="stepper">
+                <div class="step-item active" id="step-indicator-1">
+                    <div class="step-number">1</div>
+                    <span class="step-title">1. Resultado da IA</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" id="step-indicator-2">
+                    <div class="step-number">2</div>
+                    <span class="step-title">2. Ação de Contestação</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" id="step-indicator-3">
+                    <div class="step-number">3</div>
+                    <span class="step-title">3. Formulário de Relato</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" id="step-indicator-4">
+                    <div class="step-number">4</div>
+                    <span class="step-title">4. Protocolo Emitido</span>
+                </div>
+            </div>
+
+            <!-- Painel Dinâmico da Etapa do Usuário -->
+            <div class="flow-container">
+                
+                <!-- ETAPA 1 -->
+                <div class="flow-step" id="flow-step-1">
+                    <div class="alert alert-warning">
+                        <strong>⚠️ Alerta de Diagnóstico por IA:</strong> Este resultado foi gerado de forma automatizada por um modelo preditivo.
+                    </div>
+                    <div class="diagnostic-card">
+                        <div class="diag-header">
+                            <span class="patient-tag">Paciente: Fototipo V (Pele Negra)</span>
+                            <span class="date-tag">Data: Hoje</span>
+                        </div>
+                        <div class="diag-body">
+                            <h4>Laudo da IA: Lesão Pigmentada Hipercrômica</h4>
+                            <p class="status-result status-low">Risco Estimado: Baixo / Benigno (Grau de Certeza: 88%)</p>
+                            <p><strong>Recomendação Automatizada:</strong> Nenhuma intervenção urgente é necessária. Retorno padrão em 12 meses.</p>
+                        </div>
+                    </div>
+                    <div class="action-footer">
+                        <p class="help-text">O paciente apresenta sintomas de evolução rápida e alteração na borda da lesão, contrariando a estimativa da IA.</p>
+                        <button class="btn btn-primary" onclick="goToStep(2)">Avançar para Ação de Contestação →</button>
+                    </div>
+                </div>
+
+                <!-- ETAPA 2 -->
+                <div class="flow-step" id="flow-step-2" style="display: none;">
+                    <h3>2. Ação do Usuário: Contestação de Resultado</h3>
+                    <p>Diante da discordância entre o quadro clínico e o laudo gerado pela IA, o sistema disponibiliza um canal direto de transparência e reavaliação:</p>
+                    <div class="contest-action-box">
+                        <div class="box-text">
+                            <h4>Suspeita de subestimação do risco ou viés por tom de pele?</h4>
+                            <p>Sua voz garante a melhoria contínua da inteligência artificial e protege sua saúde.</p>
+                        </div>
+                        <div class="box-button">
+                            <button class="btn btn-danger btn-large" onclick="goToStep(3)">🚨 Contestar Decisão / Reportar Viés</button>
+                        </div>
+                    </div>
+                    <div class="action-footer">
+                        <button class="btn btn-outline" onclick="goToStep(1)">← Voltar para a Tela 1</button>
+                    </div>
+                </div>
+
+                <!-- ETAPA 3 -->
+                <div class="flow-step" id="flow-step-3" style="display: none;">
+                    <h3>3. Formulário de Justificativa e Anexo de Exames</h3>
+                    <p>Preencha os detalhes para fundamentar a solicitação de auditoria humana especializada:</p>
+
+                    <form id="contestForm" onsubmit="handleFormSubmit(event)">
+                        <div class="input-group">
+                            <label for="reasonSelect">Motivo Principal da Contestação *</label>
+                            <select id="reasonSelect" required>
+                                <option value="">-- Selecione o Motivo --</option>
+                                <option value="subestimacao">Subestimação de Gravidade / Suspeita de Viés de Tom de Pele</option>
+                                <option value="sintomas">Sintomas Agudos Ignorados pela IA (Coceira, Dor, Sangramento)</option>
+                                <option value="divergencia">Divergência de Diagnóstico com Clínico Geral</option>
+                                <option value="outro">Outro motivo clínico</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="userComments">Descrição Detalhada e Observações do Paciente/Médico *</label>
+                            <textarea id="userComments" rows="4" required placeholder="Descreva as alterações observadas na lesão, tempo de evolução e por que a avaliação da IA parece incorreta..."></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="examUpload">Anexar Imagens / Exames Complementares (Opcional)</label>
+                            <input type="file" id="examUpload" accept="image/*,.pdf">
+                            <small>Formatos aceitos: JPG, PNG, PDF. Ajuda o médico auditor na reavaliação rápida.</small>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="goToStep(2)">← Voltar</button>
+                            <button type="submit" class="btn btn-primary">Enviar para Auditoria Humana →</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ETAPA 4 -->
+                <div class="flow-step" id="flow-step-4" style="display: none;">
+                    <div class="confirmation-box">
+                        <div class="conf-icon">✅</div>
+                        <h3>Contestação Registrada com Sucesso!</h3>
+                        <p>Sua solicitação de revisão foi priorizada e encaminhada para a <strong>Fila de Auditoria Humana Médica</strong>.</p>
+                        
+                        <div class="protocol-badge">
+                            <span>Número do Protocolo:</span>
+                            <strong id="protocolNumber">PROTOCOL-2026-88912</strong>
+                        </div>
+
+                        <ul class="conf-details">
+                            <li><strong>Status Atual:</strong> <span class="badge-status status-pending">⏳ Em Análise por Especialista Humano</span></li>
+                            <li><strong>Prazo Máximo de Resposta:</strong> 24 Horas</li>
+                            <li><strong>Encaminhamento:</strong> O caso foi enviado para o Painel do Dermatologista Auditor.</li>
+                        </ul>
+
+                        <div class="conf-actions">
+                            <a href="#auditoria" class="btn btn-primary">Ir para o Painel do Auditor (Ver Caso na Fila)</a>
+                            <button class="btn btn-outline" onclick="goToStep(1)">Reiniciar Simulação</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DASHBOARD DE AUDITORIA MÉDICA (PAINEL DE CONTROLE DE DADOS E RE-TREINAMENTO) -->
+        <section id="auditoria" class="content-section">
+            <div class="section-header">
+                <h2>Painel de Controle e Auditoria Médica</h2>
+                <p>Visão do profissional de saúde/auditor para reavaliar decisões contestadas pela IA, corrigir laudos e enviar casos enviesados para retreinamento do algoritmo.</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Métricas do Dashboard -->
+                <div class="dash-metrics">
+                    <div class="metric-card">
+                        <span class="m-val">12</span>
+                        <span class="m-lbl">Contestações Pendentes</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="m-val">84%</span>
+                        <span class="m-lbl">Taxa de Reversão em Fototipo V/VI</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="m-val">142</span>
+                        <span class="m-lbl">Casos Enviados para Re-treino</span>
+                    </div>
+                </div>
+
+                <!-- Lista de Casos para Auditoria -->
+                <div class="audit-list-container">
+                    <h3>Fila de Auditoria de Viés Algorítmico em Tempo Real</h3>
+                    
+                    <div class="audit-card" id="audit-case-1">
+                        <div class="audit-card-header">
+                            <span class="badge-protocol">Protocolo #2026-88912</span>
+                            <span class="badge-fitz">Fototipo V (Pele Negra)</span>
+                        </div>
+                        <div class="audit-card-body">
+                            <p><strong>Diagnóstico Inicial da IA:</strong> Lesão Benigna / Baixo Risco (Confiança: 88%)</p>
+                            <p><strong>Motivo da Contestação:</strong> Subestimação de risco / Evolução rápida da margem da lesão com prurido.</p>
+                            <p class="user-quote">"Paciente relata crescimento rápido do sinal no pé direito há 3 meses. Suspeita clínica de melanoma acral lentiginoso ignorado pela visão computacional."</p>
+                        </div>
+                        <div class="audit-card-actions">
+                            <button class="btn btn-success" onclick="approveAudit('audit-case-1', 'Melanoma Acral Suspeito - Encaminhado para Biópsia Urgente')">
+                                ✅ Reverter Decisão & Atualizar Base da IA
+                            </button>
+                            <button class="btn btn-outline-danger" onclick="rejectAudit('audit-case-1')">
+                                ❌ Manter Parecer do Algoritmo
+                            </button>
+                        </div>
+                        <div class="audit-feedback-message" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ INTERATIVO (10 PERGUNTAS UFMA) -->
+        <section id="quiz" class="content-section quiz-section">
+            <div class="section-header">
+                <h2>Quiz Educativo: Racismo Algorítmico e IA na Saúde</h2>
+                <p>Teste seus conhecimentos com base na publicação de referência da Universidade Federal do Maranhão (UFMA) e entenda os desafios da equidade na era digital.</p>
+            </div>
+
+            <div id="quiz-container">
+                <!-- Perguntas geradas dinamicamente via JavaScript -->
+            </div>
+
+            <div id="quiz-result" class="quiz-result-box" style="display: none;"></div>
+        </section>
+    </main>
+
+    <!-- Rodapé Completo com Referência, Créditos e Equipe -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h4>📚 Referência Acadêmica</h4>
+                <p>Artigo de Referência da UFMA: <br>
+                    <a href="https://portalpadrao.ufma.br/site/noticias/racismo-algoritmico-e-os-impactos-sociais-professor-da-ufma-explica-os-desafios-no-combate-a-discriminacao-racial-na-era-da-inteligencia-artificial" target="_blank" rel="noopener noreferrer">
+                        Racismo algorítmico e os impactos sociais — Professor da UFMA explica os desafios no combate à discriminação racial na era da inteligência artificial ↗
+                    </a>
+                </p>
+                <p class="credits-ia">⚡ Projeto desenvolvido com o auxílio de Inteligência Artificial para fins pedagógicos, de conscientização e desenvolvimento acadêmico.</p>
+            </div>
+
+            <div class="footer-team">
+                <h4>👥 Equipe de Desenvolvimento</h4>
+                <ul>
+                    <li>Alexsandro do Carmo Sampaio</li>
+                    <li>Antônio Carlos Franca de Oliveira Neto</li>
+                    <li>Arthur Santos Pompilio de Abreu</li>
+                    <li>Gabriel Isac Almeida Conceição</li>
+                    <li>Kaique Nunes dos Santos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Saúde & IA: Combate ao Racismo Algorítmico na Medicina. Licença MIT.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

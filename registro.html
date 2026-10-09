@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Saúde, IA & Racismo Algorítmico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <div class="auth-header">
+            <a href="index.html" class="logo">🩺 Saúde<span>&</span>IA</a>
+            <h2>Criar uma Conta</h2>
+            <p>Junte-se ao portal de auditoria e combate ao racismo algorítmico na saúde</p>
+        </div>
+
+        <form id="registerForm" onsubmit="handleRegister(event)">
+            <div class="input-group">
+                <label for="regNome">Nome Completo *</label>
+                <input type="text" id="regNome" required placeholder="Ex: Dr. Alexsandro Sampaio">
+            </div>
+
+            <div class="input-group">
+                <label for="regPerfil">Perfil do Usuário *</label>
+                <select id="regPerfil" required>
+                    <option value="paciente">Paciente / Usuário Geral</option>
+                    <option value="medico">Médico / Dermatologista Auditor</option>
+                    <option value="pesquisador">Pesquisador / Desenvolvedor de IA</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="regEmail">E-mail *</label>
+                <input type="email" id="regEmail" required placeholder="seuemail@exemplo.com">
+            </div>
+
+            <div class="input-group">
+                <label for="regSenha">Senha *</label>
+                <input type="password" id="regSenha" required placeholder="Mínimo 8 caracteres">
+            </div>
+
+            <div class="input-group">
+                <label for="regConfirmar">Confirmar Senha *</label>
+                <input type="password" id="regConfirmar" required placeholder="Repita a senha">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Finalizar Cadastro</button>
+        </form>
+
+        <p class="auth-switch">Já tem uma conta? <a href="login.html">Faça Login</a></p>
+        <p class="auth-back"><a href="index.html">← Voltar para a Página Inicial</a></p>
+    </div>
+
+    <script>
+        function handleRegister(e) {
+            e.preventDefault();
+            const s1 = document.getElementById('regSenha').value;
+            const s2 = document.getElementById('regConfirmar').value;
+
+            if (s1 !== s2) {
+                alert('As senhas digitadas não correspondem!');
+                return;
+            }
+
+            alert('Cadastro concluído com sucesso! Você será redirecionado para o portal.');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
